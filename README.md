@@ -4,4 +4,4 @@ VEMO is a decentralized application that greets us and let's us deposit ERC20 to
 
 ## Screenshot
 
-![VEMO dapp](/vemo/assets/vemo-ss.png)
+![VEMO dapp](/assets/vemo-ss.png)
