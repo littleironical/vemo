@@ -137,28 +137,29 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <div className="container text-center">
-        <div className="row mt-5">
-          <div className="col">
-            <h3>{greet}</h3>
-            <h5>Contract Balance: {balance} MATIC</h5>
+    <div>
+      <nav className="navbar h2 font-monospace" style={{'background-color': "#e9cbff"}}><p style={{'padding-left': 50, 'padding-top': 15}}> VEMO </p></nav>
+      <div className="position-absolute top-50 start-50 translate-middle">
+        <div className="col">
+          <div>
+            <h2>{greet}</h2>
+            <h5 className='fw-light'>Contract Balance: <span className="fw-semibold">{balance}</span> MATIC</h5>
             {/* <button type="submit" className="btn btn-success" onClick={connectWallet}>Connect Wallet</button>
             <button type="submit" className="btn btn-success" onClick={getBalance}>Get Balance</button> */}
           </div>
-          <div className="col">
-          <form onSubmit={handleDepositSubmit}>
-            <div className="mb-3">
-              <input type="number" className="form-control" placeholder='0' onChange={handleDepositChange} value={depositValue}/>
-            </div>
-            <button type="submit" className="btn btn-success">Deposit</button>
-          </form>
-          <form className='mt-5' onSubmit={handleGreetingSubmit}>
-            <div className="mb-3">
-              <input type="text" className="form-control" placeholder='test' onChange={handleGreetingChange} value={greetingValue}/>
-            </div>
-            <button type="submit" className="btn btn-dark">Change Greeting</button>
-          </form>
+          <div className="row mt-5">
+            <form onSubmit={handleDepositSubmit}>
+              <div className="mb-3">
+                <input type="number" className="form-control" placeholder='0' onChange={handleDepositChange} value={depositValue}/>
+              </div>
+              <button type="submit" className="btn btn-success">Deposit</button>
+            </form>
+            <form className='mt-5' onSubmit={handleGreetingSubmit}>
+              <div className="mb-3">
+                <input type="text" className="form-control" placeholder='New Greeting' onChange={handleGreetingChange} value={greetingValue}/>
+              </div>
+              <button type="submit" className="btn btn-dark">Change Greeting</button>
+            </form>
           </div>
         </div>
       </div>
